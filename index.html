@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello? Who call me? Umm "YSL"</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display, Cormorant Garamond, Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+
+        /* Smooth quote fade & rise animation */
+        .quote-fade-in {
+            animation: quoteFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes quoteFade {
+            0% {
+                opacity: 0;
+                transform: translateY(10px) scale(0.98);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Luxury Earth Tone Glassmorphism Card */
+        .glass-card {
+            background: rgba(30, 25, 22, 0.72);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(212, 196, 176, 0.2);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Gold glow hover effect */
+        .btn-gold-glow {
+            box-shadow: 0 4px 20px rgba(140, 109, 88, 0.3);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-gold-glow:hover {
+            box-shadow: 0 8px 30px rgba(184, 150, 110, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Golden shimmer text highlight */
+        .gold-shimmer {
+            background: linear-gradient(135deg, #f7f4ef 0%, #d4c4b0 50%, #8c6d58 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen w-full relative flex items-center justify-center p-4 sm:p-6 overflow-x-hidden bg-[#14110f] font-montserrat">
+
+    <!-- Background Image Layer -->
+    <div class="fixed inset-0 z-0 overflow-hidden">
+        <img 
+            id="bg-image"
+            src="anton lee for ysl.jpg" 
+            alt="Anton Lee YSL Background" 
+            class="w-full h-full object-cover object-center scale-105 filter brightness-75 contrast-105 opacity-80 transition-opacity duration-700"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1920&q=80';"
+        />
+        <!-- Multi-layered Luxury Earth Tone Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#14110f] via-[#241f1c]/75 to-[#2b352e]/50"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#14110f_90%)] opacity-80"></div>
+    </div>
+
+    <!-- Main Floating Glass Container -->
+    <main class="relative z-10 w-full max-w-lg glass-card rounded-3xl p-6 sm:p-10 text-[#F7F4EF] transition-all">
+        
+        <!-- YSL Subtle Brand Accent Tag -->
+        <div class="flex justify-center mb-4">
+            <span class="tracking-[0.35em] text-[10px] sm:text-xs uppercase font-medium text-[#D4C4B0]/80 border-b border-[#8C6D58]/40 pb-1">
+                Saint Laurent Mood
+            </span>
+        </div>
+
+        <!-- Headline Section -->
+        <header class="text-center mb-8">
+            <h1 class="font-playfair text-2xl sm:text-4xl italic font-bold tracking-tight text-white leading-tight drop-shadow-md">
+                Hello? Who call me?<br>
+                <span class="font-normal not-italic tracking-wider uppercase text-2xl sm:text-3xl gold-shimmer block mt-1">
+                    Umm "YSL"
+                </span>
+            </h1>
+        </header>
+
+        <!-- Dynamic Quote Card -->
+        <section class="relative bg-[#1f2821]/50 border border-[#5C6F5E]/30 rounded-2xl p-6 sm:p-8 mb-8 min-h-[160px] flex flex-col justify-between items-center text-center shadow-inner">
+            <i class="fa-solid fa-quote-left text-2xl text-[#8C6D58]/40 mb-3"></i>
+            
+            <div id="quote-container" class="my-auto quote-fade-in">
+                <p id="quote-text" class="font-cormorant text-xl sm:text-2xl font-medium italic text-[#F7F4EF] leading-relaxed tracking-wide">
+                    "Fashions fade, style is eternal."
+                </p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-[#8C6D58]/20 w-full flex items-center justify-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#5C6F5E]"></span>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-[#D4C4B0]/60 font-medium">
+                    Attitude & Elegance
+                </span>
+            </div>
+        </section>
+
+        <!-- Main Randomize Button -->
+        <div class="mb-4">
+            <button 
+                id="random-btn" 
+                class="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#5C6F5E] via-[#4A5D4E] to-[#3B483C] hover:from-[#6F8271] hover:to-[#4A5D4E] active:scale-[0.98] text-[#F7F4EF] font-semibold text-xs sm:text-sm tracking-widest uppercase btn-gold-glow border border-[#8C6D58]/40 flex items-center justify-center gap-3 transition-all duration-300">
+                <i class="fa-solid fa-sparkles text-xs text-[#D4C4B0]"></i>
+                <span>Pick perfect one</span>
+            </button>
+        </div>
+
+        <!-- Secondary Buttons (Copy & Share to X) -->
+        <div class="grid grid-cols-2 gap-3">
+            <!-- Copy Button -->
+            <button 
+                id="copy-btn" 
+                class="py-3 px-4 rounded-xl bg-[#3B322C]/60 hover:bg-[#4A3B32] border border-[#8C6D58]/30 text-[#F7F4EF] font-medium text-xs sm:text-sm tracking-wider transition-all duration-200 flex items-center justify-center gap-2 hover:border-[#8C6D58]/60 active:scale-[0.98]">
+                <i class="fa-regular fa-copy text-xs text-[#D4C4B0]"></i>
+                <span>Copy</span>
+            </button>
+
+            <!-- Share to X Button -->
+            <button 
+                id="share-btn" 
+                class="py-3 px-4 rounded-xl bg-[#181818]/70 hover:bg-black border border-white/10 text-[#F7F4EF] font-medium text-xs sm:text-sm tracking-wider transition-all duration-200 flex items-center justify-center gap-2 hover:border-white/30 active:scale-[0.98]">
+                <i class="fa-brands fa-x-twitter text-xs text-white"></i>
+                <span>Share to your X</span>
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification Banner -->
+    <div 
+        id="toast" 
+        class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#2A231F] border border-[#8C6D58] text-[#F7F4EF] px-5 py-3 rounded-full shadow-2xl text-xs sm:text-sm font-medium tracking-wide flex items-center gap-2.5 opacity-0 pointer-events-none transition-all duration-300 transform translate-y-4">
+        <i class="fa-solid fa-check text-[#5C6F5E]"></i>
+        <span id="toast-message">Copied to clipboard.</span>
+    </div>
+
+    <script>
+        // High Fashion & Elegance English Quotes Array Only
+        const quotes = [
+            Anton looks so stunning in Saint Laurent tonight!,
+            Saint Laurent and Anton are the absolute perfect match!,
+            Anton shines so brightly at the Saint Laurent Paris Fashion Week show!,
+            Thank you Saint Laurent for inviting Anton to this wonderful event!,
+            Anton looks like a real prince in Saint Laurent!,
+            So proud to see Anton attending the Saint Laurent show in Paris!,
+            Anton brings such effortless elegance to Saint Laurent!,
+            Saint Laurent made the best choice inviting Anton!,
+            Anton is completely glowing in Saint Laurent tonight!,
+            Anton and Saint Laurent represent pure perfection!,
+            Thank you YSL for having Anton at Paris Fashion Week!,
+            Anton fits the Saint Laurent vibe so beautifully!,
+            Anton looks absolutely breathtaking at the YSL show!,
+            Saint Laurent looks even more iconic with Anton!,
+            Anton takes Paris Fashion Week to another level with Saint Laurent!,
+            Truly obsessed with Anton’s look at the Saint Laurent show!,
+            Anton and YSL are a match made in fashion heaven!,
+            Proud of Anton shining at the Saint Laurent event in Paris!,
+            Anton looks so stylish and elegant in Saint Laurent!,
+            Thank you Saint Laurent for giving Anton this amazing opportunity!,
+            Anton is pure magic at the Saint Laurent show!,
+            So happy to see Anton blooming with Saint Laurent!,
+            Anton is the main event at Saint Laurent tonight!,
+            Anton looks so classy and modern in Saint Laurent!,
+            Saint Laurent selected the best ambassador with Anton!,
+            Anton lights up Paris Fashion Week with Saint Laurent!,
+            Anton is looking so confident and handsome in Saint Laurent!,
+            Anton and Saint Laurent are the ultimate luxury combination!,
+            Anton looks gorgeous at the Saint Laurent Paris show!,
+            So excited to watch Anton with Saint Laurent tonight!,
+            Anton is visually stunning in Saint Laurent!,
+            Saint Laurent fashion suits Anton perfectly!,
+            Anton makes Paris Fashion Week extra special with YSL!,
+            Watching Anton at Saint Laurent makes us so proud!,
+            Anton is shining like a star at the YSL show!,
+            Anton in Saint Laurent is pure luxury and class!,
+            Thank you Saint Laurent for taking such great care of Anton!,
+            Anton looks so incredible at the YSL Fashion Week show!,
+            Anton and Saint Laurent create the ultimate fashion moment!,
+            Anton looks so handsome in Saint Laurent tonight!,
+            แอนตัน หล่อและสง่างาม เหมาะกับ Saint Laurent มากๆในคืนนี้!,
+            ขอบคุณ Saint Laurent ที่เชิญแอนตันมาร่วมงาน Paris Fashion Week นะคะ,
+            แอนตันกับ Saint Laurent เป็นเคมีที่ลงตัวที่สุดเลย!,
+            ออร่าของแอนตันเจิดจรัสมากในงาน Saint Laurent คืนนี้,
+            Saint Laurent เลือกแอนตันมางานนี้คือดีงามที่สุดเลย!,
+            ภูมิใจในตัวแอนตันมากๆ ที่ได้มาร่วมงานกับ Saint Laurent ที่ปารีส,
+            ลุคของแอนตันในงาน Saint Laurent สวยงามและมีคลาสมาก!,
+            แอนตันในชุด Saint Laurent คืนนี้ ช่างหล่อและดูดีไร้ที่ติจริงๆ,
+            ขอบคุณ YSL ที่ให้โอกาสแอนตันได้มาเปล่งประกายที่ปารีสนะคะ,
+            แอนตันใส่ Saint Laurent แล้วดูดีและเท่มากจริงๆ,
+            สไตล์ของ Saint Laurent เข้ากับแอนตันได้อย่างสมบูรณ์แบบ!,
+            แอนตันในงาน Saint Laurent โดดเด่นและมีเสน่ห์มาก,
+            ภูมิใจกับแอนตันมากๆ ที่ได้เป็นส่วนหนึ่งของ Saint Laurent คืนนี้,
+            แอนตันกับ YSL เป็นการจับคู่ที่งดงามที่สุดในงานแฟชั่นวีค,
+            ขอบคุณ Saint Laurent สำหรับการต้อนรับแอนตันอย่างอบอุ่นนะคะ,
+            แอนตันในชุด Saint Laurent ดูหล่อและสง่าเหมือนเจ้าชายเลย,
+            บรรยากาศงาน Saint Laurent คืนนี้ดีมาก และแอนตันก็หล่อมาก!,
+            แอนตันทำให้ Saint Laurent ยิ่งดูทรงพลังและมีเสน่ห์ขึ้นไปอีก,
+            รักลุคของแอนตันในงาน Saint Laurent ปารีสแฟชั่นวีคคืนนี้ที่สุด!,
+            ขอบคุณ Saint Laurent ที่พาแอนตันมาร่วมงานระดับโลกแบบนี้นะคะ,
+            Just like rhythmic emotion, Anton and Saint Laurent are a perfect match!,
+            Anton bringing those sweet melody vibes to Saint Laurent tonight!,
+            Anton playing the sweet melody of fashion with Saint Laurent in Paris!,
+            My heart is beating so fast seeing Anton in Saint Laurent!,
+            Saint Laurent เลือกแอนตันมางานนี้คือดีงามที่สุดเลย!,
+            Impossible is nothing when Anton wears Saint Laurent!,
+            Anton makes looking this good in Saint Laurent look so possible!,
+            Nothing is impossible for Anton at the Saint Laurent Paris show!,
+            Anton and Saint Laurent making the impossible fashion moment real!,
+            Flying high with Anton at the Saint Laurent Paris Fashion Week!,
+            Anton makes our heart beat like a Boom Boom Bass in Saint Laurent!,
+            Anton brings the best rhythm and vibe to Saint Laurent tonight!,
+            Creating the best memories with Anton and Saint Laurent in Paris!,
+            Anton shines like a bright memory at the Saint Laurent show!,
+            Anton and Saint Laurent making unforgettable memories in Paris!,
+            แอนตันในชุด Saint Laurent หล่อเอาอยู่ทุกมุม!,
+            ความหล่อระดับอิมพอสสิเบิล! แอนตันเจิดจรัสมากในงาน Saint Laurent คืนนี้,
+            จังหวะนี้แอนตันกับ Saint Laurent คือที่สุดของความคูล!,
+            แอนตันทำให้งาน Saint Laurent คืนนี้กลายเป็นความทรงจำที่งดงามที่สุด!,
+            แค่เดินออกมาก็เหมือนมีเสียงดนตรี เพราะแอนตันกับ Saint Laurent ลงตัวมาก!,
+        ];
+
+        // DOM Elements Selection
+        const quoteContainer = document.getElementById('quote-container');
+        const quoteText = document.getElementById('quote-text');
+        const randomBtn = document.getElementById('random-btn');
+        const copyBtn = document.getElementById('copy-btn');
+        const shareBtn = document.getElementById('share-btn');
+        const toast = document.getElementById('toast');
+
+        let lastIndex = -1;
+
+        // Randomize Quote Function
+        function pickPerfectOne() {
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * quotes.length);
+            } while (randomIndex === lastIndex && quotes.length > 1);
+
+            lastIndex = randomIndex;
+            const currentQuote = quotes[randomIndex];
+
+            // Trigger animation smooth restart
+            quoteContainer.classList.remove('quote-fade-in');
+            void quoteContainer.offsetWidth; // Reflow reset
+
+            quoteText.innerText = `"${currentQuote}"`;
+
+            quoteContainer.classList.add('quote-fade-in');
+        }
+
+        // Show Toast Notification
+        function showToast(message) {
+            toast.querySelector('span').innerText = message;
+            toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }, 2200);
+        }
+
+        // Copy Text to Clipboard Function
+        function copyQuote() {
+            const textToCopy = quoteText.innerText;
+
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            try {
+                document.execCommand('copy');
+                showToast("Copied quote to clipboard.");
+            } catch (err) {
+                showToast("Unable to copy text.");
+            } finally {
+                document.body.removeChild(textarea);
+            }
+        }
+
+        // Share to Twitter / X
+        function shareToX() {
+            const text = `${quoteText.innerText}\n\nHello? Who call me? Umm "YSL" ✨`;
+            const encodedText = encodeURIComponent(text);
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
+            window.open(twitterUrl, '_blank', 'width=600,height=450');
+        }
+
+        // Event Listeners
+        randomBtn.addEventListener('click', pickPerfectOne);
+        copyBtn.addEventListener('click', copyQuote);
+        shareBtn.addEventListener('click', shareToX);
+
+        // Initial Quote Load
+        window.onload = function() {
+            pickPerfectOne();
+        };
+    </script>
+</body>
+</html>
