@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello? Who call me? Umm "YSL"</title>
+    <title>Hello? Who call me? "Saint Laurent"</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -91,7 +91,7 @@
             <h1 class="font-playfair text-2xl sm:text-4xl italic font-bold tracking-tight text-white leading-tight drop-shadow-md">
                 Hello? Who call me?<br>
                 <span class="font-normal not-italic tracking-wider uppercase text-2xl sm:text-3xl gold-shimmer block mt-1">
-                    Umm "YSL"
+                    "Saint Laurent"
                 </span>
             </h1>
         </header>
@@ -139,7 +139,7 @@
                 id="share-btn" 
                 class="py-3 px-4 rounded-xl bg-[#181818]/70 hover:bg-black border border-white/10 text-[#F7F4EF] font-medium text-xs sm:text-sm tracking-wider transition-all duration-200 flex items-center justify-center gap-2 hover:border-white/30 active:scale-[0.98]">
                 <i class="fa-brands fa-x-twitter text-xs text-white"></i>
-                <span>Share to your X</span>
+                <span>Share to X with hashtag</span>
             </button>
         </div>
 
@@ -166,13 +166,13 @@
             "Saint Laurent made the best choice inviting Anton!",
             "Anton is completely glowing in Saint Laurent tonight!",
             "Anton and Saint Laurent represent pure perfection!",
-            "Thank you YSL for having Anton at Paris Fashion Week!",
+            "Thank you Saint Laurent for having Anton at Paris Fashion Week!",
             "Anton fits the Saint Laurent vibe so beautifully!",
-            "Anton looks absolutely breathtaking at the YSL show!",
+            "Anton looks absolutely breathtaking at the Saint Laurent show!",
             "Saint Laurent looks even more iconic with Anton!",
             "Anton takes Paris Fashion Week to another level with Saint Laurent!",
             "Truly obsessed with Anton’s look at the Saint Laurent show!",
-            "Anton and YSL are a match made in fashion heaven!",
+            "Anton and Saint Laurent are a match made in fashion heaven!",
             "Proud of Anton shining at the Saint Laurent event in Paris!",
             "Anton looks so stylish and elegant in Saint Laurent!",
             "Thank you Saint Laurent for giving Anton this amazing opportunity!",
@@ -188,9 +188,9 @@
             "So excited to watch Anton with Saint Laurent tonight!",
             "Anton is visually stunning in Saint Laurent!",
             "Saint Laurent fashion suits Anton perfectly!",
-            "Anton makes Paris Fashion Week extra special with YSL!",
+            "Anton makes Paris Fashion Week extra special with Saint Laurent!",
             "Watching Anton at Saint Laurent makes us so proud!",
-            "Anton is shining like a star at the YSL show!",
+            "Anton is shining like a star at the Saint Laurent show!",
             "Anton in Saint Laurent is pure luxury and class!",
             "Thank you Saint Laurent for taking such great care of Anton!",
             "Anton looks so incredible at the YSL Fashion Week show!",
@@ -204,12 +204,12 @@
             "ภูมิใจในตัวแอนตันมากๆ ที่ได้มาร่วมงานกับ Saint Laurent ที่ปารีส",
             "ลุคของแอนตันในงาน Saint Laurent สวยงามและมีคลาสมาก!",
             "แอนตันในชุด Saint Laurent คืนนี้ ช่างหล่อและดูดีไร้ที่ติจริงๆ",
-            "ขอบคุณ YSL ที่ให้โอกาสแอนตันได้มาเปล่งประกายที่ปารีสนะคะ",
+            "ขอบคุณ Saint Laurent ที่ให้โอกาสแอนตันได้มาเปล่งประกายที่ปารีสนะคะ",
             "แอนตันใส่ Saint Laurent แล้วดูดีและเท่มากจริงๆ",
             "สไตล์ของ Saint Laurent เข้ากับแอนตันได้อย่างสมบูรณ์แบบ!",
             "แอนตันในงาน Saint Laurent โดดเด่นและมีเสน่ห์มาก",
             "ภูมิใจกับแอนตันมากๆ ที่ได้เป็นส่วนหนึ่งของ Saint Laurent คืนนี้",
-            "แอนตันกับ YSL เป็นการจับคู่ที่งดงามที่สุดในงานแฟชั่นวีค",
+            "แอนตันกับ Saint Laurent เป็นการจับคู่ที่งดงามที่สุดในงานแฟชั่นวีค",
             "ขอบคุณ Saint Laurent สำหรับการต้อนรับแอนตันอย่างอบอุ่นนะคะ",
             "แอนตันในชุด Saint Laurent ดูหล่อและสง่าเหมือนเจ้าชายเลย",
             "บรรยากาศงาน Saint Laurent คืนนี้ดีมาก และแอนตันก็หล่อมาก!",
@@ -298,10 +298,10 @@
             }
         }
 
-        // Share to Twitter / X (ปรับแก้ตามความต้องการ)
+        // Share to Twitter / X
         function shareToX() {
             const rawQuote = quoteText.innerText.replace(/^"|"$/g, '');
-            const text = `${rawQuote}\n\nANTON TO SAINT LAURENT PFW\n#ANTONxSaintLaurentSS27\n#ANTONxSaintLaurent`;
+            const text = `${rawQuote}\n\nANTON AT SAINT LAURENT PFWSS27\n#ANTONxSaintLaurentSS27\n#ANTONxSaintLaurent @YSL`;
             const encodedText = encodeURIComponent(text);
             const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}`;
             window.open(twitterUrl, '_blank', 'width=600,height=450');
