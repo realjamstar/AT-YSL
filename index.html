@@ -279,24 +279,25 @@
             }, 2200);
         }
 
-        // Copy Text to Clipboard Function
-        function copyQuote() {
-            const textToCopy = quoteText.innerText;
+        // Copy Text to Clipboard Function (แบบไม่ติดเครื่องหมาย " ")
+function copyQuote() {
+    // ดึงข้อความและลบเครื่องหมาย " ที่อยู่หน้าสุดและหลังสุดออก
+    const textToCopy = quoteText.innerText.replace(/^"|"$/g, '');
 
-            const textarea = document.createElement('textarea');
-            textarea.value = textToCopy;
-            document.body.appendChild(textarea);
-            textarea.select();
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+    document.body.appendChild(textarea);
+    textarea.select();
 
-            try {
-                document.execCommand('copy');
-                showToast("Copied quote to clipboard.");
-            } catch (err) {
-                showToast("Unable to copy text.");
-            } finally {
-                document.body.removeChild(textarea);
-            }
-        }
+    try {
+        document.execCommand('copy');
+        showToast("Copied quote to clipboard.");
+    } catch (err) {
+        showToast("Unable to copy text.");
+    } finally {
+        document.body.removeChild(textarea);
+    }
+}
 
         // Share to Twitter / X
         function shareToX() {
